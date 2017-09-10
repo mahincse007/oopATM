@@ -45,8 +45,7 @@ namespace ConsoleAppOpp
 
             if (userIndex < 0)
             {
-                Console.WriteLine("\nNo Card Found, please try again");
-                Console.WriteLine();
+                Console.WriteLine("\nNo Card Found, please try again\n");
                 Start();
             }
 
