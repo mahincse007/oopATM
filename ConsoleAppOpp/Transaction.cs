@@ -34,7 +34,6 @@ namespace ConsoleAppOpp
                 AcObj.noOfTnx = 0; 
                 accountList.Add(AcObj);
             }
-
             Start();
         }
 
@@ -50,8 +49,8 @@ namespace ConsoleAppOpp
                 Console.WriteLine();
                 Start();
             }
-            userCard = inputCard;
 
+            userCard = inputCard;
             PinChkeck();
             Display();
         }
@@ -61,12 +60,9 @@ namespace ConsoleAppOpp
             Console.WriteLine("\nEnter UR PIN ");
             var inputPin = Int32.Parse(Console.ReadLine());
 
-            foreach(var item in accountList)
+            if(accountList[userIndex].pinNo == inputPin)
             {
-                if(item.cardNo == userCard && item.pinNo == inputPin)
-                {
-                    return;
-                }
+                return;
             }
 
             Console.WriteLine("\nWrong PIN, Please try again\n");
